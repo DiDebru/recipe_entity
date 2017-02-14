@@ -1,0 +1,14 @@
+<?php
+
+/**function recipe_entity_entity_info() {
+  return array(
+    'recipe_entity' => array(
+      'label' => t('Recipe entity'),
+      'base table' => 'recipe_entity',
+      'entity keys' => array(
+        'id' => 'reid',
+      ),
+    ),
+  );
+}**/
+

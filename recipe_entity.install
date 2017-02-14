@@ -1,0 +1,34 @@
+<?php
+
+function recipe_entity_schema() {
+  $schema['recipe_entity'] = array(
+    'description' => 'Recipe entity base table',
+    'fields' => array(
+      'reid' => array(
+        'description' => 'Primary identifier for recipe entity.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'submitted' => array(
+        'description' => 'The Unix timestamp when the recipe was submitted.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0
+      ),
+      'site_language' => array(
+        'description' => 'The sites language',
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 2,
+      ),
+    ),
+    'primary key' => 'reid',
+  );
+
+  return $schema;
+}
+
+function recipe_entity_uninstall() {
+  drupal_uninstall_schema('recipe_entity');
+}

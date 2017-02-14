@@ -1,0 +1,5 @@
+name = Recipe entity
+description = Entity to add a recipe
+core = 7.x
+dependencies[] = rules:rules
+package = Custom
